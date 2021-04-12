@@ -18,7 +18,7 @@ public class CommunicationService {
     public CommunicationService() {
         //Initialize
         try {
-            File nodesFile = new File("/Users/green/Git/7200Project/src/main/resources/nodes.txt");
+            File nodesFile = new File("src/main/resources/nodes.txt");
             Scanner scanner = new Scanner(nodesFile);
             String jsonString = "";
             while(scanner.hasNextLine()) {
@@ -134,7 +134,7 @@ public class CommunicationService {
     private void writeDown() {
 
         try {
-            FileWriter writer = new FileWriter("/Users/green/Git/7200Project/src/main/resources/nodes.txt");
+            FileWriter writer = new FileWriter("src/main/resources/nodes.txt");
             String jsonString = new Gson().toJson(nodes);
             writer.write(jsonString);
             writer.close();

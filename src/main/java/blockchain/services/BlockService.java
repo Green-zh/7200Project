@@ -24,7 +24,7 @@ public class BlockService {
     public BlockService() {
         //Initialize
         try {
-            File blocksfile = new File("/Users/green/Git/7200Project/src/main/resources/blockchain.txt");
+            File blocksfile = new File("src/main/resources/blockchain.txt");
             Scanner scanner = new Scanner(blocksfile);
             String jsonString = "";
             while(scanner.hasNextLine()) {
@@ -188,7 +188,7 @@ public class BlockService {
     private void writeDown() {
 
         try {
-            FileWriter writer = new FileWriter("/Users/green/Git/7200Project/src/main/resources/blockchain.txt");
+            FileWriter writer = new FileWriter("src/main/resources/blockchain.txt");
             String jsonString = new Gson().toJson(blockchain);
             writer.write(jsonString);
             writer.close();

@@ -28,7 +28,7 @@ public class TransactionService {
     public TransactionService() {
         //Initialize
         try {
-            File transactionsFile = new File("/Users/green/Git/7200Project/src/main/resources/transactions.txt");
+            File transactionsFile = new File("src/main/resources/transactions.txt");
             Scanner scanner = new Scanner(transactionsFile);
             String jsonString = "";
             while(scanner.hasNextLine()) {
@@ -129,7 +129,7 @@ public class TransactionService {
     private void writeDown() {
 
         try {
-            FileWriter writer = new FileWriter("/Users/green/Git/7200Project/src/main/resources/transactions.txt");
+            FileWriter writer = new FileWriter("src/main/resources/transactions.txt");
             String jsonString = new Gson().toJson(txs);
             writer.write(jsonString);
             writer.close();
